@@ -1,0 +1,19 @@
+font poopins
+
+colors:
+primary: 468EF9 0C66EE
+primary: linear-gradient(130deg, #468EF9, #0C66EE);
+blue: 2F7CF0
+hero text: 3984F4 0CD3FF 2F7CF0 0E65E8
+css: 
+    background: -webkit-linear-gradient(283deg, #3984F4, #0CD3FF, #2F7CF0, #0E65E8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+font-primary-black: 222222
+font-secondary-gray: 666666
+gray-light: DDDDDD
+green: 28C165
+red: F4574D
+
+emoticon:
+🔥 🚀 💎

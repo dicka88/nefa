@@ -1,0 +1,24 @@
+{
+  "name": "nefa",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.3",
+    "classnames": "^2.3.1",
+    "postcss": "^8.4.11",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-easy-emoji": "^1.6.1",
+    "react-icons": "^4.3.1",
+    "tailwindcss": "^3.0.23"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^1.0.7",
+    "vite": "^2.8.0"
+  }
+}
