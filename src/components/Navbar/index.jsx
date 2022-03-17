@@ -1,5 +1,5 @@
 import React from 'react';
-import { BsChevronDown } from 'react-icons/bs';
+import { BsChevronDown, BsList } from 'react-icons/bs';
 
 import logo from '../../images/logo.svg';
 import PrimaryButton from '../buttons/PrimaryButton';
@@ -30,6 +30,11 @@ export default function Navbar() {
           <PrimaryButton>
             Sign Up
           </PrimaryButton>
+        </div>
+        <div className="md:hidden">
+          <button>
+            <BsList />
+          </button>
         </div>
       </div>
     </nav>
