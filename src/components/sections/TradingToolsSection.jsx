@@ -5,7 +5,7 @@ import SecondaryButton from '../buttons/SecondaryButton';
 
 export default function TradingToolsSection() {
   return (
-    <div className="px-6">
+    <section className="px-6">
       <div className='rounded-3xl bg-gradient-to-b from-[#FFFFFF] to-[#F4F9FF] py-20'>
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2">
@@ -40,6 +40,6 @@ export default function TradingToolsSection() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

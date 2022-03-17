@@ -7,7 +7,7 @@ import arrow from '../../images/arrow.svg';
 
 export default function StepSection() {
   return (
-    <div className="px-6">
+    <section className="px-6">
       <div className='rounded-3xl bg-gradient-to-b from-[#FFFFFF] to-[#F4F9FF] py-20'>
         <div className="container mx-auto text-center">
           <h2 className="font-bold text-4xl mb-6 leading-normal">
@@ -44,6 +44,6 @@ export default function StepSection() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

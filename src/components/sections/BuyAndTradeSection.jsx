@@ -6,7 +6,7 @@ import PrimaryButton from '../buttons/PrimaryButton';
 
 export default function BuyAndTradeSection() {
   return (
-    <div className="container mx-auto py-32">
+    <section className="container mx-auto py-32">
       <div className="grid md:grid-cols-2 gap-10">
         <div className="flex items-center">
           <div className="max-w-xl">
@@ -54,6 +54,6 @@ export default function BuyAndTradeSection() {
           <img src={buyIcon} alt="" />
         </div>
       </div>
-    </div >
+    </section >
   );
 }

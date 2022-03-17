@@ -7,7 +7,7 @@ import partner4 from '../../images/partners/partner4.png';
 
 export default function PartnerSection() {
   return (
-    <div className="px-6">
+    <section className="px-6">
       <div className='rounded-3xl bg-gradient-to-b from-[#FFFFFF] to-[#F4F9FF] py-20'>
         <div className="container mx-auto">
           <div className="text-center mb-4">
@@ -24,6 +24,6 @@ export default function PartnerSection() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

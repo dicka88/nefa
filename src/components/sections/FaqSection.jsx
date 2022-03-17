@@ -35,7 +35,7 @@ const FaqItem = ({ open, title, children }) => {
 
 export default function FaqSection() {
   return (
-    <div className="container mx-auto py-32">
+    <section className="container mx-auto py-32">
       <div className="grid md:grid-cols-2">
         <img src={faq} alt="" />
         <div className="flex justify-center">
@@ -61,6 +61,6 @@ export default function FaqSection() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
