@@ -8,7 +8,7 @@ export default function TradingToolsSection() {
     <div className="px-6">
       <div className='rounded-3xl bg-gradient-to-b from-[#FFFFFF] to-[#F4F9FF] py-20'>
         <div className="container mx-auto">
-          <div className="grid grid-cols-2">
+          <div className="grid md:grid-cols-2">
             <div className='max-w-lg'>
               <h2 className="font-bold text-4xl mb-6 leading-normal">
                 Advanced Trading <span class="text-blue-gradient">Tools</span>
@@ -34,7 +34,9 @@ export default function TradingToolsSection() {
                 </button>
               </a>
             </div>
-            <img src={tradingTools} alt="" />
+            <div className="row-start-1 mb-8">
+              <img src={tradingTools} alt="" />
+            </div>
           </div>
         </div>
       </div>

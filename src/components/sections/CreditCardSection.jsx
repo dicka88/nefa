@@ -7,8 +7,10 @@ import creditCard from '../../images/illustrations/credit-card.png';
 export default function CreditCardSection() {
   return (
     <div className="container mx-auto py-32">
-      <div className="grid grid-cols-2">
-        <img src={creditCard} alt="" />
+      <div className="grid md:grid-cols-2">
+        <div className="mb-12 px-4 md:px-4">
+          <img src={creditCard} alt="" />
+        </div>
         <div className="flex justify-center">
           <div className="max-w-md">
             <h2 className="font-bold text-4xl mb-6 leading-normal">

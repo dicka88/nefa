@@ -8,9 +8,9 @@ export default function Footer() {
   return (
     <footer>
       <div className="container mx-auto border-y border-lightgray py-6">
-        <div className="grid grid-cols-4">
-          <div className="flex justify-between p-6 border-r border-lightgray">
-            <div>
+        <div className="grid md:grid-cols-4">
+          <div className="p-6 md:flex md:justify-between md:border-r border-lightgray">
+            <div className='mb-6'>
               <img src={logo} alt="" />
             </div>
             <ul>
@@ -31,7 +31,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <div className='p-6 flex justify-center border-r border-lightgray'>
+          <div className='p-6 md:flex md:justify-center md:border-r border-lightgray'>
             <ul>
               <li className='mb-4'>
                 <a href="/" className='text-gray'>Products</a>
@@ -50,7 +50,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <div className='p-6 flex justify-center border-r border-lightgray'>
+          <div className='p-6 md:flex md:justify-center md:border-r border-lightgray'>
             <ul>
               <li className='mb-4'>
                 <a href="/" className='text-gray'>Help Center</a>
@@ -69,11 +69,11 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <div className="p-6">
+          <div className="p-6 w-full">
             <span className='text-gray'>Newsletter</span>
             <p className='text-gray font-thin'>Never miss anything crypto when you're on the go</p>
             <div className="flex gap-4 my-4">
-              <input type="email" className="border border-lightgray rounded-xl p-4 outline-none focus:border-primary" placeholder="Enter your email" />
+              <input type="email" className="border border-lightgray rounded-xl p-4 outline-none focus:border-primary w-full" placeholder="Enter your email" />
               <PrimaryButton className="px-5 rounded-lg">
                 <BsArrowRight color='white' />
               </PrimaryButton>

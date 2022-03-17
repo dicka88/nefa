@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function SecondaryButton({ children, className, onClick, ...props }) {
   const cx = classNames([
-    "border border-primary text-primary hover:bg-primary hover:text-white transition-colors duration-300 rounded-full py-4 px-10",
+    "border border-primary text-primary hover:bg-primary hover:text-white transition-colors duration-300 rounded-full py-3 px-6 md:py-4 md:px-10",
     className
   ]);
 

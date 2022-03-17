@@ -21,8 +21,8 @@ export default function ListCoin({ title, more, data }) {
           <span className='text-gray'>Price</span>
           <span className='text-gray'>Chart</span>
         </div>
-        {data.map(({ image, name, price, uptrend }) =>
-          <CoinRow image={image} coinName={name} coinPrice={price} coinUpTrend={uptrend} />
+        {data.map(({ image, name, price, uptrend }, i) =>
+          <CoinRow key={i} image={image} coinName={name} coinPrice={price} coinUpTrend={uptrend} />
         )}
       </div>
     </>

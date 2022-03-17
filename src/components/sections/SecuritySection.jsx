@@ -6,8 +6,10 @@ import banks from '../../images/illustrations/banks.png';
 export default function SecuritySection() {
   return (
     <div className="container mx-auto py-32">
-      <div className="grid grid-cols-2">
-        <img src={banks} alt="" />
+      <div className="grid md:grid-cols-2">
+        <div>
+          <img src={banks} alt="" />
+        </div>
         <div className="flex justify-center">
           <div className="max-w-xl">
             <h2 className="font-bold text-4xl mb-6 leading-normal">
