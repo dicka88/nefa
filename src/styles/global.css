@@ -4,9 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  font-size: 18px;
+}
+
 body {
   font-family: "Poppins", sans-serif;
-  font-size: 18px;
 }
 
 .bg-primary {
