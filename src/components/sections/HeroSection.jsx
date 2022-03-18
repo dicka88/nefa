@@ -7,19 +7,19 @@ import SecondaryButton from '../buttons/SecondaryButton';
 
 export default function HeroSection() {
   return (
-    <section className='bg-primary bg-opacity-5 pt-8 pb-8 md:pt-0'>
-      <div className="container px-4 md:px-0 mx-auto grid md:grid-cols-2">
-        <div className='flex items-center' >
+    <section className='bg-primary bg-opacity-5 pt-8 pb-16 md:pt-0'>
+      <div className="container px-4 mx-auto grid md:grid-cols-2">
+        <div className='flex items-center'>
           <div>
             <p className='text-primary'>SIGN UP TODAY</p>
-            <h1 className='text-4xl md:text-6xl font-bold leading-normal'>The World’s</h1>
-            <h1 className='text-4xl md:text-6xl font-bold leading-normal text-blue-gradient'>Fastest Growing</h1>
-            <h1 className='text-4xl md:text-6xl font-bold leading-normal'>Crypto Web App</h1>
+            <h1 className='text-4xl md:text-5xl lg:text-6xl font-bold leading-normal'>The World’s</h1>
+            <h1 className='text-4xl md:text-5xl lg:text-6xl font-bold leading-normal text-blue-gradient'>Fastest Growing</h1>
+            <h1 className='text-4xl md:text-5xl lg:text-6xl font-bold leading-normal'>Crypto Web App</h1>
             <div className="mt-4 mb-8">
               <p className="text-gray">Buy and sell 200+ cryptocurrencies with 20+ flat currencies using</p>
               <p className="text-gray">bank transfers or your credit/debit card.</p>
             </div>
-            <div className="flex">
+            <div className="col-span-2 flex lg:mb-12">
               <PrimaryButton className="mr-4">
                 Get Started
               </PrimaryButton>
@@ -33,7 +33,7 @@ export default function HeroSection() {
         <div className="hidden md:block">
           <img src={globoCrypto} alt="Globe" />
         </div>
-      </div >
+      </div>
     </section >
   );
 }

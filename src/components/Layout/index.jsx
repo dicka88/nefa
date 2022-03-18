@@ -4,10 +4,14 @@ import Navbar from '../Navbar';
 
 export default function Layout({ children }) {
   return (
-    <div>
-      <Navbar />
-      {children}
+    <>
+      <header>
+        <Navbar />
+      </header>
+      <main>
+        {children}
+      </main>
       <Footer />
-    </div>
+    </>
   );
 }

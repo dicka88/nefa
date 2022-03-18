@@ -11,7 +11,7 @@ export default function Navbar() {
       <div className="sticky px-4 container mx-auto top-0 py-8 flex justify-between items-center">
         <div className="flex items-center">
           <img src={logo} className="mr-6" alt="Neva" />
-          <div className='hidden md:flex'>
+          <div className='hidden xl:flex'>
             <a href="/" className='mx-6 hover:text-primary'>Cryptocurrency</a>
             <a href="/" className='mx-6 hover:text-primary'>Exchanges</a>
             <a href="/" className='mx-6 hover:text-primary'>Watchlist</a>
@@ -23,7 +23,7 @@ export default function Navbar() {
             </a>
           </div>
         </div>
-        <div className="hidden  md:flex">
+        <div className="hidden md:flex">
           <SecondaryButton className="mr-4">
             Sign In
           </SecondaryButton>
@@ -31,7 +31,7 @@ export default function Navbar() {
             Sign Up
           </PrimaryButton>
         </div>
-        <div className="md:hidden">
+        <div className="md:hidden text-2xl">
           <button>
             <BsList />
           </button>
