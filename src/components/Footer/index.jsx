@@ -7,7 +7,7 @@ import PrimaryButton from '../buttons/PrimaryButton';
 export default function Footer() {
   return (
     <footer>
-      <div className="container mx-auto border-y border-lightgray py-6">
+      <div className="container px-2 border-y border-lightgray py-6">
         <div className="grid lg:grid-cols-3 xl:grid-cols-4">
           <div className="p-6 xl:flex md:justify-between xl:border-r border-lightgray">
             <div className='mb-6'>
@@ -15,68 +15,72 @@ export default function Footer() {
             </div>
             <ul>
               <li className='mb-4'>
-                <a href="/" className='text-gray'>Buy Crypto</a>
+                <a href="/" className='text-gray hover:text-primary'>Buy Crypto</a>
               </li>
               <li className='mb-4'>
-                <a href="/" className='text-gray'>Exchanges</a>
+                <a href="/" className='text-gray hover:text-primary'>Exchanges</a>
               </li>
               <li className='mb-4'>
-                <a href="/" className='text-gray'>Watchlist</a>
+                <a href="/" className='text-gray hover:text-primary'>Watchlist</a>
               </li>
               <li className='mb-4'>
-                <a href="/" className='text-gray'>Portfolio</a>
+                <a href="/" className='text-gray hover:text-primary'>Portfolio</a>
               </li>
               <li className='mb-4'>
-                <a href="/" className='text-gray'>NFT</a>
+                <a href="/" className='text-gray hover:text-primary'>NFT</a>
               </li>
             </ul>
           </div>
           <div className='p-6 xl:flex md:justify-center xl:border-r border-lightgray'>
             <ul>
               <li className='mb-4'>
-                <a href="/" className='text-gray'>Products</a>
+                <a href="/" className='text-gray hover:text-primary'>Products</a>
               </li>
               <li className='mb-4'>
-                <a href="/" className='text-gray'>About Us</a>
+                <a href="/" className='text-gray hover:text-primary'>About Us</a>
               </li>
               <li className='mb-4'>
-                <a href="/" className='text-gray'>Careers</a>
+                <a href="/" className='text-gray hover:text-primary'>Careers</a>
               </li>
               <li className='mb-4'>
-                <a href="/" className='text-gray'>Blog</a>
+                <a href="/" className='text-gray hover:text-primary'>Blog</a>
               </li>
               <li className='mb-4'>
-                <a href="/" className='text-gray'>Security</a>
+                <a href="/" className='text-gray hover:text-primary'>Security</a>
               </li>
             </ul>
           </div>
           <div className='p-6 xl:flex md:justify-center xl:border-r border-lightgray'>
             <ul>
               <li className='mb-4'>
-                <a href="/" className='text-gray'>Help Center</a>
+                <a href="/" className='text-gray hover:text-primary'>Help Center</a>
               </li>
               <li className='mb-4'>
-                <a href="/" className='text-gray'>Contact Us</a>
+                <a href="/" className='text-gray hover:text-primary'>Contact Us</a>
               </li>
               <li className='mb-4'>
-                <a href="/" className='text-gray'>System Status</a>
+                <a href="/" className='text-gray hover:text-primary'>System Status</a>
               </li>
               <li className='mb-4'>
-                <a href="/" className='text-gray'>Area Avaibility</a>
+                <a href="/" className='text-gray hover:text-primary'>Area Avaibility</a>
               </li>
               <li className='mb-4'>
-                <a href="/" className='text-gray'>Privacy Policy</a>
+                <a href="/" className='text-gray hover:text-primary'>Privacy Policy</a>
               </li>
             </ul>
           </div>
-          <div className="p-6 w-full lg:col-span-3">
+          <div className="p-6 w-full lg:col-span-3 xl:col-auto">
             <span className='text-gray'>Newsletter</span>
             <p className='text-gray font-thin'>Never miss anything crypto when you're on the go</p>
             <div className="flex gap-4 my-4">
-              <input type="email" className="border border-lightgray rounded-xl p-4 outline-none focus:border-primary w-full" placeholder="Enter your email" />
-              <PrimaryButton className="px-5 rounded-md">
-                <BsArrowRight color='white' />
-              </PrimaryButton>
+              <div>
+                <input type="email" className="border border-lightgray rounded-xl p-4 outline-none focus:border-primary w-full" placeholder="Enter your email" />
+              </div>
+              <div>
+                <PrimaryButton className="!px-5 aspect-square rounded-lg">
+                  <BsArrowRight color='white' />
+                </PrimaryButton>
+              </div>
             </div>
           </div>
         </div>
