@@ -1,9 +1,9 @@
 import React from 'react';
 import { BsChevronDown } from 'react-icons/bs';
 
-import globoCrypto from '../../images/illustrations/globe.png';
-import PrimaryButton from '../buttons/PrimaryButton';
-import SecondaryButton from '../buttons/SecondaryButton';
+import globoCrypto from '@/images/illustrations/globe.png';
+import PrimaryButton from '@/components/buttons/PrimaryButton';
+import SecondaryButton from '@/components/buttons/SecondaryButton';
 
 export default function HeroSection() {
   return (
@@ -19,11 +19,11 @@ export default function HeroSection() {
               <p className="text-gray">Buy and sell 200+ cryptocurrencies with 20+ flat currencies using</p>
               <p className="text-gray">bank transfers or your credit/debit card.</p>
             </div>
-            <div className="col-span-2 flex lg:mb-12">
-              <PrimaryButton className="mr-4">
+            <div className="col-span-2 lg:flex lg:mb-12">
+              <PrimaryButton className="w-full mb-2 mr-4">
                 Get Started
               </PrimaryButton>
-              <SecondaryButton>
+              <SecondaryButton className="w-full">
                 Download App
                 <BsChevronDown className="inline ml-2" />
               </SecondaryButton>

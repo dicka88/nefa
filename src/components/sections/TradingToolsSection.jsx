@@ -1,7 +1,7 @@
 import React from 'react';
 
-import tradingTools from '../../images/illustrations/tradingtools.png';
-import SecondaryButton from '../buttons/SecondaryButton';
+import tradingTools from '@/images/illustrations/tradingtools.png';
+import SecondaryButton from '@/components/buttons/SecondaryButton';
 
 export default function TradingToolsSection() {
   return (
@@ -11,7 +11,7 @@ export default function TradingToolsSection() {
           <div className="grid md:grid-cols-2 gap-6">
             <div className='max-w-lg'>
               <h2 className="font-bold text-4xl mb-6 leading-normal">
-                Advanced Trading <span class="text-blue-gradient">Tools</span>
+                Advanced Trading <span className="text-blue-gradient">Tools</span>
               </h2>
               <div className="mb-6">
                 <h3 className='font-bold text-xl mb-4'>Professional Access, Non-stop Availability</h3>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { BsCheckCircleFill } from 'react-icons/bs';
 
-import banks from '../../images/illustrations/banks.png';
+import banks from '@/images/illustrations/banks.png';
 
 export default function SecuritySection() {
   return (

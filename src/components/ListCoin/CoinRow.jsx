@@ -1,6 +1,6 @@
 import React from 'react';
-import upChart from '../../images/charts/up.svg';
-import downChart from '../../images/charts/down.svg';
+import upChart from '@/images/charts/up.svg';
+import downChart from '@/images/charts/down.svg';
 
 export default function CoinRow({ image, coinName, coinPrice, coinUpTrend }) {
   return (

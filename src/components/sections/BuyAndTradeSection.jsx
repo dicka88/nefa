@@ -1,8 +1,8 @@
 import React from 'react';
 import { BsChevronDown } from 'react-icons/bs';
 
-import buyIcon from '../../images/illustrations/buy.png';
-import PrimaryButton from '../buttons/PrimaryButton';
+import buyIcon from '@/images/illustrations/buy.png';
+import PrimaryButton from '@/components/buttons/PrimaryButton';
 
 export default function BuyAndTradeSection() {
   return (

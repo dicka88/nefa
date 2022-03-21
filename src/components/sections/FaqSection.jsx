@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import React, { useState } from 'react';
 import { BsChevronUp, BsChevronDown } from 'react-icons/bs';
 
-import faq from '../../images/illustrations/faq.png';
+import faq from '@/images/illustrations/faq.png';
 
 const FaqItem = ({ open, title, children }) => {
   const [isOpen, setIsOpen] = useState(open ? true : false);

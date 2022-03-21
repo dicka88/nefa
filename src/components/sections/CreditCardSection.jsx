@@ -1,8 +1,8 @@
 import React from 'react';
 import { BsCheckCircleFill } from 'react-icons/bs';
 
-import SecondaryButton from '../buttons/SecondaryButton';
-import creditCard from '../../images/illustrations/credit-card.png';
+import SecondaryButton from '@/components/buttons/SecondaryButton';
+import creditCard from '@/images/illustrations/credit-card.png';
 
 export default function CreditCardSection() {
   return (
@@ -14,7 +14,7 @@ export default function CreditCardSection() {
         <div className="flex justify-center">
           <div className="max-w-md">
             <h2 className="font-bold text-4xl mb-6 leading-normal">
-              Introducing the <span class="text-blue-gradient">NEFA</span> <br /> Credit Card
+              Introducing the <span className="text-blue-gradient">NEFA</span> <br /> Credit Card
             </h2>
             <p className='text-gray'>Subject to cardholder and rewards terms which will be available <br /> at application.</p>
 
