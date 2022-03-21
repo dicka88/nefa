@@ -25,10 +25,10 @@ export default function Navbar() {
   }, [isMobile]);
 
   return (
-    <nav className={classNames('fixed w-full transition-all duration-400', {
+    <nav className={classNames('fixed w-full transition-all duration-400 z-10', {
       'bg-white': dropdownOpen
     })}>
-      <div className="sticky px-4 container mx-auto top-0 py-8 flex justify-between items-center">
+      <div className="px-4 container mx-auto top-0 py-8 flex justify-between items-center">
         <div className="flex items-center">
           <img src={logo} className="mr-6" alt="Neva" />
           <div className='hidden mx-4 gap-8 xl:flex'>

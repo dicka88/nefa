@@ -7,9 +7,9 @@ import SecondaryButton from '@/components/buttons/SecondaryButton';
 
 export default function HeroSection() {
   return (
-    <section className='relative bg-primary pt-[140px] bg-opacity-5 pb-16'>
+    <section className='bg-primary pt-[140px] bg-opacity-5 pb-24'>
       <span className="absolute bg-purple-400 -left-28 -top-28 rounded-full opacity-[20%] blur-3xl aspect-square h-[350px]  -z-10" />
-      <span className="absolute bg-gradient-to-br from-primary to-secondary -right-28 -bottom-28 rounded-full opacity-[20%] blur-3xl aspect-square h-[350px] -z-10" />
+      <span className="absolute bg-gradient-to-br from-primary to-secondary -right-28 -bottom-28 rounded-full opacity-[20%] blur-3xl aspect-square h-[450px] -z-10" />
 
       <div className="container px-4 mx-auto grid md:grid-cols-2">
         <div className='flex items-center'>
