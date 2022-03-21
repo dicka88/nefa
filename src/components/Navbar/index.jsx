@@ -1,11 +1,12 @@
 import classNames from 'classnames';
 import React, { useState } from 'react';
-import { BsChevronDown, BsList, BsX } from 'react-icons/bs';
+import { BsList, BsX } from 'react-icons/bs';
 import OutsideClickHandler from 'react-outside-click-handler/build/OutsideClickHandler';
 
 import logo from '@/images/logo.svg';
 import PrimaryButton from '@/components/buttons/PrimaryButton';
 import SecondaryButton from '@/components/buttons/SecondaryButton';
+import Menus from './Menus';
 
 export default function Navbar() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -21,16 +22,8 @@ export default function Navbar() {
       <div className="sticky px-4 container mx-auto top-0 py-8 flex justify-between items-center">
         <div className="flex items-center">
           <img src={logo} className="mr-6" alt="Neva" />
-          <div className='hidden xl:flex'>
-            <a href="/" className='mx-6 hover:text-primary'>Cryptocurrency</a>
-            <a href="/" className='mx-6 hover:text-primary'>Exchanges</a>
-            <a href="/" className='mx-6 hover:text-primary'>Watchlist</a>
-            <a href="/" className='mx-6 hover:text-primary'>NFT</a>
-            <a href="/" className='mx-6 hover:text-primary'>Portofolios</a>
-            <a href="/" className='mx-6 hover:text-primary'>
-              Product
-              <BsChevronDown className="inline ml-2" />
-            </a>
+          <div className='hidden mx-4 gap-8 xl:flex'>
+            <Menus />
           </div>
         </div>
         <div className="hidden gap-4 md:flex">
@@ -64,27 +57,7 @@ export default function Navbar() {
                     </PrimaryButton>
                   </div>
                   <div className="mb-4">
-                    <div className="w-full">
-                      <a href="/" className='hover:text-primary py-2 block'>Cryptocurrency</a>
-                    </div>
-                    <div className="w-full">
-                      <a href="/" className='hover:text-primary py-2 block'>Exchanges</a>
-                    </div>
-                    <div className="w-full">
-                      <a href="/" className='hover:text-primary py-2 block'>Watchlist</a>
-                    </div>
-                    <div className="w-full">
-                      <a href="/" className='hover:text-primary py-2 block'>NFT</a>
-                    </div>
-                    <div className="w-full">
-                      <a href="/" className='hover:text-primary py-2 block'>Portofolios</a>
-                    </div>
-                    <div className="w-full">
-                      <a href="/" className='hover:text-primary py-2 flex justify-between'>
-                        Product
-                        <BsChevronDown className="inline ml-2" />
-                      </a>
-                    </div>
+                    <Menus />
                   </div>
                 </div>
               </OutsideClickHandler>
