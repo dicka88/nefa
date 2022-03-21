@@ -1,10 +1,11 @@
 import classNames from 'classnames';
 import React, { useState } from 'react';
 import { BsChevronDown, BsList, BsX } from 'react-icons/bs';
+import OutsideClickHandler from 'react-outside-click-handler/build/OutsideClickHandler';
 
-import logo from '../../images/logo.svg';
-import PrimaryButton from '../buttons/PrimaryButton';
-import SecondaryButton from '../buttons/SecondaryButton';
+import logo from '@/images/logo.svg';
+import PrimaryButton from '@/components/buttons/PrimaryButton';
+import SecondaryButton from '@/components/buttons/SecondaryButton';
 
 export default function Navbar() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -52,39 +53,41 @@ export default function Navbar() {
           {/* Menu dropdown */}
           <div className={dropdownClass}>
             <div className="h-screen left-0 bg-black bg-opacity-30">
-              <div className="z-20 shadow-xl bg-white p-6">
-                <div className="gap-4 flex mb-6">
-                  <SecondaryButton className="w-full">
-                    Sign In
-                  </SecondaryButton>
-                  <PrimaryButton className="w-full">
-                    Sign Up
-                  </PrimaryButton>
+              <OutsideClickHandler onOutsideClick={() => setDropdownOpen(false)}>
+                <div className="z-20 shadow-xl bg-white p-6">
+                  <div className="gap-4 flex mb-6">
+                    <SecondaryButton className="w-full">
+                      Sign In
+                    </SecondaryButton>
+                    <PrimaryButton className="w-full">
+                      Sign Up
+                    </PrimaryButton>
+                  </div>
+                  <div className="mb-4">
+                    <div className="w-full">
+                      <a href="/" className='hover:text-primary py-2 block'>Cryptocurrency</a>
+                    </div>
+                    <div className="w-full">
+                      <a href="/" className='hover:text-primary py-2 block'>Exchanges</a>
+                    </div>
+                    <div className="w-full">
+                      <a href="/" className='hover:text-primary py-2 block'>Watchlist</a>
+                    </div>
+                    <div className="w-full">
+                      <a href="/" className='hover:text-primary py-2 block'>NFT</a>
+                    </div>
+                    <div className="w-full">
+                      <a href="/" className='hover:text-primary py-2 block'>Portofolios</a>
+                    </div>
+                    <div className="w-full">
+                      <a href="/" className='hover:text-primary py-2 flex justify-between'>
+                        Product
+                        <BsChevronDown className="inline ml-2" />
+                      </a>
+                    </div>
+                  </div>
                 </div>
-                <div className="mb-4">
-                  <div className="w-full">
-                    <a href="/" className='hover:text-primary py-2 block'>Cryptocurrency</a>
-                  </div>
-                  <div className="w-full">
-                    <a href="/" className='hover:text-primary py-2 block'>Exchanges</a>
-                  </div>
-                  <div className="w-full">
-                    <a href="/" className='hover:text-primary py-2 block'>Watchlist</a>
-                  </div>
-                  <div className="w-full">
-                    <a href="/" className='hover:text-primary py-2 block'>NFT</a>
-                  </div>
-                  <div className="w-full">
-                    <a href="/" className='hover:text-primary py-2 block'>Portofolios</a>
-                  </div>
-                  <div className="w-full">
-                    <a href="/" className='hover:text-primary py-2 flex justify-between'>
-                      Product
-                      <BsChevronDown className="inline ml-2" />
-                    </a>
-                  </div>
-                </div>
-              </div>
+              </OutsideClickHandler>
             </div>
           </div>
         </div>
