@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BsList, BsX } from 'react-icons/bs';
 import OutsideClickHandler from 'react-outside-click-handler/build/OutsideClickHandler';
 
@@ -7,6 +7,7 @@ import logo from '@/images/logo.svg';
 import PrimaryButton from '@/components/buttons/PrimaryButton';
 import SecondaryButton from '@/components/buttons/SecondaryButton';
 import Menus from './Menus';
+import { useMediaQuery } from 'react-responsive';
 
 export default function Navbar() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -17,8 +18,16 @@ export default function Navbar() {
     'visible opacity-100': dropdownOpen,
   });
 
+  const isMobile = useMediaQuery({ maxWidth: '768px' });
+
+  useEffect(() => {
+    setDropdownOpen(false);
+  }, [isMobile]);
+
   return (
-    <nav className={`relative transition-all duration-400 ${dropdownOpen ? 'bg-white' : 'bg-primary'} bg-opacity-5`}>
+    <nav className={classNames('fixed w-full transition-all duration-400', {
+      'bg-white': dropdownOpen
+    })}>
       <div className="sticky px-4 container mx-auto top-0 py-8 flex justify-between items-center">
         <div className="flex items-center">
           <img src={logo} className="mr-6" alt="Neva" />
