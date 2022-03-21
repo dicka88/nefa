@@ -1,5 +1,6 @@
 import React from 'react';
 import { BsChevronDown } from 'react-icons/bs';
+import { Fade } from 'react-reveal';
 
 import buyIcon from '@/images/illustrations/buy.png';
 import PrimaryButton from '@/components/buttons/PrimaryButton';
@@ -51,7 +52,9 @@ export default function BuyAndTradeSection() {
           </div>
         </div>
         <div className='row-start-1 md:col-start-2'>
-          <img src={buyIcon} alt="" />
+          <Fade up>
+            <img src={buyIcon} alt="" />
+          </Fade>
         </div>
       </div>
     </section >

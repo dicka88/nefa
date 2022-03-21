@@ -2,13 +2,16 @@ import React from 'react';
 import { BsCheckCircleFill } from 'react-icons/bs';
 
 import banks from '@/images/illustrations/banks.png';
+import { Fade } from 'react-reveal';
 
 export default function SecuritySection() {
   return (
     <section className="container mx-auto py-32">
       <div className="grid md:grid-cols-2">
         <div>
-          <img src={banks} alt="" />
+          <Fade up>
+            <img src={banks} alt="" />
+          </Fade>
         </div>
         <div className="flex justify-center">
           <div className="max-w-xl">

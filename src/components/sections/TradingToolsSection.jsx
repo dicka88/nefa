@@ -2,6 +2,7 @@ import React from 'react';
 
 import tradingTools from '@/images/illustrations/tradingtools.png';
 import SecondaryButton from '@/components/buttons/SecondaryButton';
+import { Fade } from 'react-reveal';
 
 export default function TradingToolsSection() {
   return (
@@ -9,7 +10,7 @@ export default function TradingToolsSection() {
       <div className='rounded-3xl bg-gradient-to-b from-[#FFFFFF] to-[#F4F9FF] py-20'>
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-6">
-            <div className='max-w-lg'>
+            <div className='lg:row-start-1 max-w-lg'>
               <h2 className="font-bold text-4xl mb-6 leading-normal">
                 Advanced Trading <span className="text-blue-gradient">Tools</span>
               </h2>
@@ -28,14 +29,16 @@ export default function TradingToolsSection() {
               <SecondaryButton>
                 Get Started
               </SecondaryButton>
-              <a href="">
+              <a href="#">
                 <button className='py-4 px-10 text-primary underline'>
                   Learn more
                 </button>
               </a>
             </div>
             <div className="row-start-1 mb-8">
-              <img src={tradingTools} alt="" />
+              <Fade up>
+                <img src={tradingTools} alt="" />
+              </Fade>
             </div>
           </div>
         </div>
