@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import emoji from 'react-easy-emoji';
 import { BsChevronRight } from 'react-icons/bs';
@@ -28,3 +29,9 @@ export default function ListCoin({ title, more, data }) {
     </>
   );
 }
+
+ListCoin.propTypes = {
+  title: PropTypes.string,
+  more: PropTypes.string,
+  data: PropTypes.array.isRequired
+};

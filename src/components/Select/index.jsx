@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import React, { useState } from 'react';
 import { BsChevronDown } from 'react-icons/bs';
 import OutsideClickHandler from 'react-outside-click-handler';
+import PropTypes from 'prop-types';
 
 export default function Select({ onChange, value = "BTC" }) {
   const data = [{
@@ -51,8 +52,8 @@ export default function Select({ onChange, value = "BTC" }) {
           'visible opacity-100': isOpen
         })}>
           <div>
-            {data.map(coin =>
-              <div className={classNames('py-2 flex items-center cursor-pointer hover:text-white select-none px-4 hover:bg-primary', {
+            {data.map((coin, i) =>
+              <div key={i} className={classNames('py-2 flex items-center cursor-pointer hover:text-white select-none px-4 hover:bg-primary', {
                 'bg-primary text-white': coin.name === valueSelected.name
               })} onClick={() => onChangeHandler(coin)}>
                 <div className='h-[26px] aspect-square pr-2'>
@@ -68,3 +69,8 @@ export default function Select({ onChange, value = "BTC" }) {
     </div >
   );
 }
+
+Select.propTypes = {
+  onChange: PropTypes.func,
+  value: PropTypes.string
+};

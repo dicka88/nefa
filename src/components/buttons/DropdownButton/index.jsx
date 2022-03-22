@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { BsChevronDown } from 'react-icons/bs';
 import OutsideClickHandler from 'react-outside-click-handler';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 
 import SecondaryButton from '../SecondaryButton';
 
@@ -26,3 +27,9 @@ export default function DropdownButton({ className, name, children }) {
     </div>
   );
 }
+
+DropdownButton.propTypes = {
+  classNames: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired
+};

@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React, { useEffect, useState } from 'react';
 import { BsList, BsX } from 'react-icons/bs';
-import OutsideClickHandler from 'react-outside-click-handler/build/OutsideClickHandler';
+import OutsideClickHandler from 'react-outside-click-handler';
 
 import logo from '@/images/logo.svg';
 import PrimaryButton from '@/components/buttons/PrimaryButton';

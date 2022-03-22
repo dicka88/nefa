@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 
@@ -15,3 +17,7 @@ export default function Layout({ children }) {
     </>
   );
 }
+
+Layout.propTypes = {
+  children: PropTypes.node
+};

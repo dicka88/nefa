@@ -1,6 +1,7 @@
 import React from 'react';
 import { ReactSVG } from 'react-svg';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 
 import blueCircle from '@/images/particles/circle1.svg';
 
@@ -11,3 +12,7 @@ export default function BlueCircleParticle({ className }) {
     </span>
   );
 }
+
+BlueCircleParticle.propTypes = {
+  classNames: PropTypes.string
+};

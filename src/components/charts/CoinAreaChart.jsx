@@ -1,5 +1,6 @@
 import React from 'react';
 import { ResponsiveContainer, Area, ComposedChart } from 'recharts';
+import PropTypes from 'prop-types';
 
 export default function CoinAreaChart({ isUpTrend }) {
   const data = [
@@ -41,3 +42,7 @@ export default function CoinAreaChart({ isUpTrend }) {
     </ResponsiveContainer>
   );
 }
+
+CoinAreaChart.propTypes = {
+  isUpTrend: PropTypes.bool
+};

@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import React, { useState } from 'react';
 import { BsChevronDown } from 'react-icons/bs';
 import ReactOutsideClickHandler from 'react-outside-click-handler';
+import PropTypes from 'prop-types';
 
 export default function DropdownMenu({ children }) {
   const [open, setOpen] = useState(false);
@@ -28,3 +29,7 @@ export default function DropdownMenu({ children }) {
     </div>
   );
 }
+
+DropdownMenu.propTypes = {
+  children: PropTypes.node
+};
