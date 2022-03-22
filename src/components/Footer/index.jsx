@@ -77,7 +77,7 @@ export default function Footer() {
                 <input type="email" className="border border-lightgray rounded-xl p-4 outline-none focus:border-primary w-full" placeholder="Enter your email" />
               </div>
               <div>
-                <PrimaryButton className="!px-5 aspect-square rounded-lg">
+                <PrimaryButton className="!px-5 aspect-square !rounded-md">
                   <BsArrowRight color='white' />
                 </PrimaryButton>
               </div>
@@ -87,6 +87,9 @@ export default function Footer() {
       </div>
       <div className="text-center py-6">
         <p className="text-gray">© Copyright 2022 NEFA LLC. All rights reserved</p>
+        <small className='text-gray'>
+          Design by Irvan Moses, checkout the repository <a href="https://github.com/dicka88/nefa" className="text-primary" target="_blank" rel='noreferrer'>here</a>
+        </small>
       </div>
     </footer>
   );
