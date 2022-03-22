@@ -34,17 +34,18 @@ export default function Select({ onChange, value = "BTC" }) {
 
   return (
     <div className="relative">
-      <div className="border border-primary cursor-pointer rounded-2xl py-3 md:py-4 px-4 md:px-6 flex items-center"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        <div className='w-[26px] pr-2'>
-          <img src={valueSelected.icon} alt={valueSelected.name} className="flex items-center" />
-        </div>
-        <span className='inline-block mr-2'>{valueSelected.name}</span>
-        <BsChevronDown />
-      </div>
-
       <OutsideClickHandler onOutsideClick={() => isOpen && setIsOpen(false)}>
+
+        <div className="border border-primary cursor-pointer rounded-2xl py-3 md:py-4 px-4 md:px-6 flex items-center"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <div className='w-[26px] pr-2'>
+            <img src={valueSelected.icon} alt={valueSelected.name} className="flex items-center" />
+          </div>
+          <span className='inline-block mr-2'>{valueSelected.name}</span>
+          <BsChevronDown />
+        </div>
+
         <div className={classNames('absolute top-full right-0 left-0 bg-white z-[2] mt-4 rounded-xl shadow-xl border border-primary overflow-hidden', {
           'invisible opacity-0': !isOpen,
           'visible opacity-100': isOpen
