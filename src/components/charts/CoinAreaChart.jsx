@@ -16,7 +16,6 @@ export default function CoinAreaChart({ isUpTrend }) {
   return (
     <ResponsiveContainer
       height={50}
-      width={150}
     >
       <ComposedChart
         data={data}
