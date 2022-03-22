@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import React, { useState } from 'react';
-import { BsChevronUp, BsChevronDown } from 'react-icons/bs';
+import { BsChevronUp } from 'react-icons/bs';
 
 import faq from '@/images/illustrations/faq.png';
 import { Fade } from 'react-reveal';
@@ -38,9 +38,11 @@ export default function FaqSection() {
   return (
     <section className="container mx-auto py-32">
       <div className="grid md:grid-cols-2">
-        <Fade up duratio="1000">
-          <img src={faq} alt="FAQ" />
-        </Fade>
+        <div className="mb-4">
+          <Fade up duration="1000">
+            <img src={faq} alt="FAQ" />
+          </Fade>
+        </div>
         <div className="flex justify-center">
           <div className="">
             <span className="text-primary">SUPPORT</span>
