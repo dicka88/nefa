@@ -10,11 +10,11 @@ export default function DropdownButton({ className, name, children }) {
 
   return (
     <div className="relative">
-      <SecondaryButton className={className} onClick={() => setIsOpen(!isOpen)}>
-        {name}
-        <BsChevronDown className="inline ml-2" />
-      </SecondaryButton>
       <OutsideClickHandler onOutsideClick={() => isOpen && setIsOpen(false)}>
+        <SecondaryButton className={className} onClick={() => setIsOpen(!isOpen)}>
+          {name}
+          <BsChevronDown className="inline ml-2" />
+        </SecondaryButton>
         <div data-testid="dropdown" className={
           classNames('absolute left-0 right-0 top-full transition-all duration-200 z-[1] overflow-hidden mt-2 border border-primary rounded-3xl bg-white shadow-xl', {
             'opacity-100 visible': isOpen,
