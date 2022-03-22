@@ -17,9 +17,9 @@ export default function Navbar() {
 
   const handleWindowScroll = (e) => {
     const height = window.scrollY;
-    const treesholdHeight = 200;
+    const tresholdHeight = 50;
 
-    if (height > treesholdHeight) {
+    if (height > tresholdHeight) {
       setBackgroundWhite(true);
     } else {
       setBackgroundWhite(false);
