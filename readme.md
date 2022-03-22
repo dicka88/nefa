@@ -1,4 +1,34 @@
 # NEFA - Cryptocurrency Web App
-Slicing design from Irvan Moses
 
-- Design is on figma
+Web landingpage of cryptocurrency site, built with React and Tailwindcss.
+
+Figma design by [Irvan Moses](https://dribbble.com/irvan_moses)
+
+![Preview](https://i.ibb.co/r6wHtcW/image.png)
+
+You can see a [DEMO](https://nefa.netlify.app)
+
+## How to start the web
+
+```bash
+yarn
+yarn dev
+```
+
+## Build the project
+
+```bash
+yarn build
+```
+
+## Run a testing
+
+```bash
+yarn test
+```
+
+## Contributor
+
+## License
+
+Source code is under MIT license
