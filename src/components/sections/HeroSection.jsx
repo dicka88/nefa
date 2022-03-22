@@ -11,7 +11,7 @@ import DropdownButton from '../buttons/DropdownButton';
 
 export default function HeroSection() {
   return (
-    <section className='relative bg-primary pt-[140px] bg-opacity-5 pb-24 overflow-hidden'>
+    <section className='relative bg-primary pt-[140px] bg-opacity-5 pb-24'>
       <span className="absolute bg-purple-400 -left-28 -top-28 rounded-full opacity-[20%] blur-3xl aspect-square h-[350px] -z-10 animate-pulse" />
       <span className="absolute bg-gradient-to-br from-primary to-secondary -right-28 -bottom-28 rounded-full opacity-[15%] blur-3xl  delay-700 duration-1000 aspect-square h-[550px] -z-10" />
 
@@ -35,7 +35,7 @@ export default function HeroSection() {
               <PrimaryButton className="w-full lg:w-auto mb-2 lg:mb-0">
                 Get Started
               </PrimaryButton>
-              <DropdownButton name="Download App">
+              <DropdownButton name="Download App" className="w-full lg:w-auto">
                 <a href="/download/windows" target="_blank" className="w-full hover:bg-primary px-6 pt-4 pb-2 block hover:text-white">
                   <FaWindows className='inline mr-2' /> Windows
                 </a>
