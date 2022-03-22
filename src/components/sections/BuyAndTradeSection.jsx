@@ -1,9 +1,9 @@
 import React from 'react';
-import { BsChevronDown } from 'react-icons/bs';
 import { Fade } from 'react-reveal';
 
 import buyIcon from '@/images/illustrations/buy.png';
 import PrimaryButton from '@/components/buttons/PrimaryButton';
+import Select from '../Select';
 
 export default function BuyAndTradeSection() {
   return (
@@ -21,13 +21,7 @@ export default function BuyAndTradeSection() {
                 </div>
                 <input type="text" value="5,000" className='text-right outline-none w-full' />
               </div>
-              <div className="border border-primary rounded-2xl py-3 md:py-4 px-4 md:px-6 flex items-center">
-                <div className='w-[26px] pr-2'>
-                  <img src="/cryptocurrencies/usd.svg" alt="" className="flex items-center" />
-                </div>
-                <span className='inline-block mr-2'>USD</span>
-                <BsChevronDown />
-              </div>
+              <Select value="USD" />
             </div>
 
             <div className="flex justify-between gap-4 md:gap-6 mb-6">
@@ -37,13 +31,7 @@ export default function BuyAndTradeSection() {
                 </div>
                 <input type="text" value="0.10901" className='text-right outline-none w-full' />
               </div>
-              <div className="border border-primary rounded-2xl py-3 md:py-4 px-4 md:px-6 flex items-center">
-                <div className='w-[26px] pr-2'>
-                  <img src="/cryptocurrencies/btc.svg" alt="" className="flex items-center" />
-                </div>
-                <span className='inline-block mr-2'>BTC</span>
-                <BsChevronDown />
-              </div>
+              <Select value="BTC" />
             </div>
 
             <PrimaryButton className="w-full">
