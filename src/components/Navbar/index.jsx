@@ -11,24 +11,42 @@ import { useMediaQuery } from 'react-responsive';
 
 export default function Navbar() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
-
-  const dropdownClass = classNames({
-    'text-base left-0 top-full right-0 absolute transition-all duration-400': true,
-    'invisible opacity-0': !dropdownOpen,
-    'visible opacity-100': dropdownOpen,
-  });
+  const [backgroundwhite, setBackgroundWhite] = useState(false);
 
   const isMobile = useMediaQuery({ maxWidth: '768px' });
 
+  const handleWindowScroll = (e) => {
+    const height = window.scrollY;
+    const treesholdHeight = 200;
+
+    if (height > treesholdHeight) {
+      setBackgroundWhite(true);
+    } else {
+      setBackgroundWhite(false);
+    }
+  };
+
   useEffect(() => {
-    setDropdownOpen(false);
+    if (isMobile) {
+      setDropdownOpen(false);
+    }
   }, [isMobile]);
 
+  useEffect(() => {
+    setBackgroundWhite(dropdownOpen);
+  }, [dropdownOpen]);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleWindowScroll);
+
+    return () => window.removeEventListener('scrol', handleWindowScroll);
+  }, []);
+
   return (
-    <nav className={classNames('fixed w-full transition-all duration-400 z-10', {
-      'bg-white': dropdownOpen
+    <nav className={classNames('fixed w-full transition-all duration-700 z-10 py-8 ', {
+      'bg-white shadow-lg !py-3': backgroundwhite
     })}>
-      <div className="px-4 container mx-auto top-0 py-8 flex justify-between items-center">
+      <div className="px-4 container mx-auto top-0 flex justify-between items-center">
         <div className="flex items-center">
           <img src={logo} className="mr-6" alt="Neva" />
           <div className='hidden mx-4 gap-8 xl:flex'>
@@ -53,7 +71,11 @@ export default function Navbar() {
           </button>
 
           {/* Menu dropdown */}
-          <div className={dropdownClass}>
+          <div className={classNames({
+            'text-base left-0 top-full right-0 absolute transition-all duration-400': true,
+            'invisible opacity-0': !dropdownOpen,
+            'visible opacity-100': dropdownOpen,
+          })}>
             <div className="h-screen left-0 bg-black bg-opacity-30">
               <OutsideClickHandler onOutsideClick={() => setDropdownOpen(false)}>
                 <div className="z-20 shadow-xl bg-white p-6">
