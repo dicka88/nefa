@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import { BsChevronDown } from 'react-icons/bs';
-import OutsideClickHandler from 'react-outside-click-handler';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
 import SecondaryButton from '../SecondaryButton';
+import ClickOutComponent from 'react-onclickout';
 
 export default function DropdownButton({ className, name, children }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="relative">
-      <OutsideClickHandler onOutsideClick={() => isOpen && setIsOpen(false)}>
+      <ClickOutComponent onClickOut={() => isOpen && setIsOpen(false)}>
         <SecondaryButton className={className} onClick={() => setIsOpen(!isOpen)}>
           {name}
           <BsChevronDown className="inline ml-2" />
@@ -23,7 +23,7 @@ export default function DropdownButton({ className, name, children }) {
           })}>
           {children}
         </div>
-      </OutsideClickHandler>
+      </ClickOutComponent>
     </div>
   );
 }

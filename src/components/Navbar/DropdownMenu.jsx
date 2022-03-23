@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React, { useState } from 'react';
 import { BsChevronDown } from 'react-icons/bs';
-import ReactOutsideClickHandler from 'react-outside-click-handler';
+import ClickOutComponent from 'react-onclickout';
 import PropTypes from 'prop-types';
 
 export default function DropdownMenu({ children }) {
@@ -12,20 +12,20 @@ export default function DropdownMenu({ children }) {
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
     >
-      <span className='hover:text-primary py-2 cursor-pointer flex items-center justify-between'
+      <span className="hover:text-primary py-2 cursor-pointer flex items-center justify-between"
         onClick={() => setOpen(!open)}
       >
         Product
         <BsChevronDown className="inline ml-2" />
       </span>
-      <ReactOutsideClickHandler onOutsideClick={() => open && setOpen(false)}>
+      <ClickOutComponent onClickOut={() => open && setOpen(false)}>
         <div className={classNames("lg:absolute top-full shadow-lg -left-1/2 -right-1/2 rounded-lg bg-white", {
           "opacity-100 visible h-full lg:h-auto py-4 px-6": open,
           "opacity-0 invisible h-0": !open
         })}>
           {children}
         </div>
-      </ReactOutsideClickHandler>
+      </ClickOutComponent >
     </div>
   );
 }

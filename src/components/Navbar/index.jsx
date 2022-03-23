@@ -1,13 +1,12 @@
 import classNames from 'classnames';
 import React, { useEffect, useState } from 'react';
 import { BsList, BsX } from 'react-icons/bs';
-import OutsideClickHandler from 'react-outside-click-handler';
+import { useMediaQuery } from 'react-responsive';
 
 import logo from '@/images/logo.svg';
 import PrimaryButton from '@/components/buttons/PrimaryButton';
 import SecondaryButton from '@/components/buttons/SecondaryButton';
 import Menus from './Menus';
-import { useMediaQuery } from 'react-responsive';
 
 export default function Navbar() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -26,6 +25,11 @@ export default function Navbar() {
     }
   };
 
+  const handleBlackScreenClick = (e) => {
+    e.stopPropagation();
+    setDropdownOpen(false);
+  };
+
   useEffect(() => {
     if (isMobile) {
       setDropdownOpen(false);
@@ -39,7 +43,7 @@ export default function Navbar() {
   useEffect(() => {
     window.addEventListener('scroll', handleWindowScroll);
 
-    return () => window.removeEventListener('scrol', handleWindowScroll);
+    return () => window.removeEventListener('scroll', handleWindowScroll);
   }, []);
 
   return (
@@ -76,22 +80,20 @@ export default function Navbar() {
             'invisible opacity-0': !dropdownOpen,
             'visible opacity-100': dropdownOpen,
           })}>
-            <div className="h-screen left-0 bg-black bg-opacity-30">
-              <OutsideClickHandler onOutsideClick={() => setDropdownOpen(false)}>
-                <div className="z-20 shadow-xl bg-white p-6">
-                  <div className="gap-4 flex mb-6">
-                    <SecondaryButton className="w-full">
-                      Sign In
-                    </SecondaryButton>
-                    <PrimaryButton className="w-full">
-                      Sign Up
-                    </PrimaryButton>
-                  </div>
-                  <div className="mb-4">
-                    <Menus />
-                  </div>
+            <div className="h-screen left-0 bg-black bg-opacity-30" onClick={handleBlackScreenClick}>
+              <div className="z-20 shadow-xl bg-white p-6">
+                <div className="gap-4 flex mb-6">
+                  <SecondaryButton className="w-full">
+                    Sign In
+                  </SecondaryButton>
+                  <PrimaryButton className="w-full">
+                    Sign Up
+                  </PrimaryButton>
                 </div>
-              </OutsideClickHandler>
+                <div className="mb-4">
+                  <Menus />
+                </div>
+              </div>
             </div>
           </div>
         </div>

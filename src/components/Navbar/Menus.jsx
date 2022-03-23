@@ -25,7 +25,7 @@ export default function Menus() {
           <a href="/" className='hover:text-primary py-2 block'>Portofolios</a>
         </div>
         <div className="w-full">
-          <a href="/" className='hover:text-primary py-2 block'>Portofolios</a>
+          <a href="/" className='hover:text-primary py-2 block'>Portofoliosx</a>
         </div>
       </DropdownMenu>
     </>

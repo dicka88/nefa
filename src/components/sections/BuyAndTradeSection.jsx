@@ -3,12 +3,16 @@ import { Fade } from 'react-reveal';
 
 import buyIcon from '@/images/illustrations/buy.png';
 import PrimaryButton from '@/components/buttons/PrimaryButton';
-import Select from '../Select';
+import Select from '@/components/Select';
 
 export default function BuyAndTradeSection() {
 
   const formHandler = (e) => {
     e.preventDefault();
+  };
+
+  const inputChangeHandler = (e) => {
+    console.log(e.target.value);
   };
 
   return (
@@ -25,7 +29,7 @@ export default function BuyAndTradeSection() {
                   <div className="border-r border-primary pr-4 md:pr-6">
                     <small className="text-primary">Amount</small>
                   </div>
-                  <input type="text" value="5,000" className='text-right outline-none w-full' />
+                  <input type="text" value="5,000" onChange={inputChangeHandler} className='text-right outline-none w-full' />
                 </div>
                 <Select value="USD" />
               </div>
@@ -35,7 +39,7 @@ export default function BuyAndTradeSection() {
                   <div className="border-r border-primary pr-4 md:pr-6">
                     <small className="text-primary">Amount</small>
                   </div>
-                  <input type="text" value="0.10901" className='text-right outline-none w-full' />
+                  <input type="text" value="0.10901" onChange={inputChangeHandler} className='text-right outline-none w-full' />
                 </div>
                 <Select value="BTC" />
               </div>

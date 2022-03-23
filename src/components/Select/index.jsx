@@ -1,8 +1,8 @@
 import classNames from 'classnames';
 import React, { useState } from 'react';
 import { BsChevronDown } from 'react-icons/bs';
-import OutsideClickHandler from 'react-outside-click-handler';
 import PropTypes from 'prop-types';
+import ClickOutComponent from 'react-onclickout';
 
 export default function Select({ onChange, value = "BTC" }) {
   const data = [{
@@ -35,7 +35,7 @@ export default function Select({ onChange, value = "BTC" }) {
 
   return (
     <div className="relative">
-      <OutsideClickHandler onOutsideClick={() => isOpen && setIsOpen(false)}>
+      <ClickOutComponent onClickOut={() => isOpen && setIsOpen(false)}>
 
         <div className="border border-primary cursor-pointer rounded-2xl py-3 md:py-4 px-4 md:px-6 flex items-center"
           onClick={() => setIsOpen(!isOpen)}
@@ -64,7 +64,7 @@ export default function Select({ onChange, value = "BTC" }) {
             )}
           </div>
         </div>
-      </OutsideClickHandler>
+      </ClickOutComponent>
 
     </div >
   );
