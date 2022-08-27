@@ -6,7 +6,7 @@ Figma design by [Irvan Moses](https://dribbble.com/irvan_moses)
 
 ![Preview](https://i.ibb.co/r6wHtcW/image.png)
 
-You can see a [DEMO](https://nefa.netlify.app)
+You can see the [DEMO](https://nefa.netlify.app)
 
 ## How to start the web
 
