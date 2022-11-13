@@ -28,6 +28,7 @@ yarn test
 ```
 
 ## Contributor
+- Dicka Ismaji
 
 ## License
 
